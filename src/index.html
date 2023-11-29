@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Slick slider Link  -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <!-- style Link  -->
+    <link rel="stylesheet" href="../dist/output.css" />
+    <title>Go ticket shop</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        transition: background-color 0.3s ease;
+        background-color: #f8f8f8; /* Set your desired background color */
+      }
+  
+      nav {
+        position: sticky;
+        top: 0;
+        background-color: transparent;
+        z-index: 1000;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, padding 0.3s ease;
+      }
+  
+      nav.sticky {
+        background-color: white;
+        padding: 10px 0; /* Adjust padding as needed */
+      }
+  
+      nav img {
+        width: 200px; /* Adjust the width of your logo */
+      }
+  
+      .search-container {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: none;
+      }
+  
+      .search-input {
+        padding: 10px;
+        width: 200px; /* Adjust the width of your search input */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 0 10px;
+      }
+  
+      /* Add your existing styles for icons if needed */
+    </style>
+   
+
+  </head>
+
+  <body>
+    <div>
+      <h1
+        class="text-center text-xs sm:text-sm md:text-base text-[#cbcbcb] p-3"
+      >
+        <span class="text-[#a2a2a2] font-semibold">
+          Wederverkoper van tickets.
+        </span>
+        De verkoopprijs kan hoger, of juist lager zijn dan de face value
+      </h1>
+    </div>
+
+    <main>
+      <!-------------- Hero Section ---------------->
+      <section id="hero">
+        <div class="bg-heroBanner bg-center bg-no-repeat bg-cover">
+          <div class="bg-black/70 pb-12 md:pb-20">
+            <div class="px-5 xl:container xl:mx-auto">
+                <nav id="navbar">
+  <div class="flex items-center justify-between">
+    <img src="../assets/icons/logo.svg" alt="logo" />
+    <div class="flex items-center">
+      <img src="../assets/icons/Account.svg" alt="icon" class="cursor-pointer w-[40px] md:w-[60px]" />
+      <img src="../assets/icons/Klantenservice.svg" alt="icon" width="60px" class="cursor-pointer w-[40px] md:w-[60px]" />
+      <img src="../assets/icons/Winkelwagen.svg" alt="icon" width="60px" class="cursor-pointer w-[40px] md:w-[60px]" />
+    </div>
+    <div class="search-container">
+      <input type="text" placeholder="Search" class="search-input" />
+    </div>
+  </div>
+</nav>
+
+              <h1
+                class="text-3xl md:text-5xl text-center font-bold text-white mt-10 md:mt-20"
+              >
+                BRUCE SPRINGSTEEN <span class="font-light"> 2022 </span>
+              </h1>
+              <div class="flex justify-center mt-5">
+                <p
+                  class="py-1 px-8 text-white font-semibold bg-redG rounded-lg"
+                >
+                  Kaarten vanaf €160,-
+                </p>
+              </div>
+
+              <div class=" flex-col items-center justify-center ml-5 mt-12 md:mt-24">
+               <div class="flex items-center justify-center"> <img
+                  src="../assets/icons/Magnify.svg"
+                  alt="icon"
+                  width="35px"
+                  class="-mr-14 z-10"
+                />
+                <input id="search"
+                  type="text"
+                  placeholder="Zoek een evenement, artiest of locatie"
+                  class="py-3 md:py-5 pl-16 md:pl-20 pr-5 w-[700px] font-medium text-[#b7b7b7] md:text-lg rounded-2xl focus:outline-purpleG"
+                  autocomplete="off"
+                
+                  /></div>
+                  <div id="suggestions" class=" m-auto overflow-auto  w-[600px]   bg-[#fff] ">
+                    <!-- <ul class="border-t-2 py-[15px] px-5">
+                      <li class="py-2 px-2 border-r-2 bg-white hover:bg-[#e9f3ff]">Javascript</li>
+                      <li  class="py-2  px-2 border-r-2 bg-white hover:bg-[#e9f3ff]">Javascript</li>
+                      <li  class="py-2  px-2 border-r-2 bg-white hover:bg-[#e9f3ff]">Javascript</li>
+                    </ul> -->
+                  </div>
+    
+                
+                  
+              </div>
+                            
+
+              <div
+                class="max-w-[500px] md:max-w-[1100px] mx-auto mt-16 md:mt-28"
+              >
+                <div class="flex items-center justify-between gap-2">
+                  <div class="w-24 md:w-40">
+                    <div
+                      class="relative h-12 w-2 md:w-3 hover:w-24 md:hover:w-40 bg-redG transition-all ease-linear duration-300"
+                    >
+                      <h1
+                        class="absolute left-5 top-3 md:top-1 text-sm md:text-3xl font-bold text-white"
+                      >
+                        Concert
+                      </h1>
+                    </div>
+                  </div>
+                  <div class="w-24 md:w-40">
+                    <div
+                      class="relative h-12 w-2 md:w-3 hover:w-24 md:hover:w-40 bg-skyBlue transition-all ease-linear duration-300"
+                    >
+                      <h1
+                        class="absolute left-5 top-3 md:top-1 text-sm md:text-3xl font-bold text-white"
+                      >
+                        Festival
+                      </h1>
+                    </div>
+                  </div>
+                  <div class="w-24 md:w-40">
+                    <div
+                      class="relative h-12 w-2 md:w-3 hover:w-24 md:hover:w-40 bg-purpleG transition-all ease-linear duration-300"
+                    >
+                      <h1
+                        class="absolute left-5 top-3 md:top-1 text-sm md:text-3xl font-bold text-white"
+                      >
+                        Theater
+                      </h1>
+                    </div>
+                  </div>
+                  <div class="w-24 md:w-36">
+                    <div
+                      class="relative h-12 w-2 md:w-3 hover:w-24 md:hover:w-36 bg-greenG transition-all ease-linear duration-300"
+                    >
+                      <h1
+                        class="absolute left-5 top-3 md:top-1 text-sm md:text-3xl font-bold text-white"
+                      >
+                        Sport
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-------------- POPULAIRE EVENEMENTEN Section ---------------->
+      <section id="popular-events">
+        <div class="py-10 md:py-20 px-5 md:px-10 xl:container xl:mx-auto">
+          <h1 class="font-bold text-2xl md:text-3xl text-purpleG">
+            POPULAIRE
+            <span class="font-light"> EVENEMENTEN </span>
+          </h1>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6 md:mt-10"
+          >
+            <div>
+              <div class="relative">
+                <img
+                  src="../assets/images/Placeholder.png"
+                  alt="event dancing"
+                  class="w-full"
+                />
+                <div class="bg-black/50 absolute inset-0">
+                  <div
+                    class="flex h-full justify-center items-center font-bold"
+                  >
+                    <h1 class="text-2xl text-white">EVENEMENT 1</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-[#edecf4] text-purpleG py-5 px-8">
+                <h1 class="font-bold text-lg">Twee datums beschikbaar</h1>
+                <p class="">Locatie, Amsterdam</p>
+              </div>
+              <button
+                class="bg-purpleG w-full text-white text-lg font-bold py-3 rounded-b-2xl"
+              >
+                Vanaf €320
+              </button>
+            </div>
+            <div>
+              <div class="relative">
+                <img
+                  src="../assets/images/Placeholder.png"
+                  alt="event dancing"
+                  class="w-full"
+                />
+                <div class="bg-black/50 absolute inset-0">
+                  <div
+                    class="flex h-full justify-center items-center font-bold"
+                  >
+                    <h1 class="text-2xl text-white">EVENEMENT 2</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-[#edecf4] text-purpleG py-5 px-8">
+                <h1 class="font-bold text-lg">Twee datums beschikbaar</h1>
+                <p class="">Locatie, Amsterdam</p>
+              </div>
+              <button
+                class="bg-purpleG w-full text-white text-lg font-bold py-3 rounded-b-2xl"
+              >
+                Vanaf €320
+              </button>
+            </div>
+            <div>
+              <div class="relative">
+                <img
+                  src="../assets/images/Placeholder.png"
+                  alt="event dancing"
+                  class="w-full"
+                />
+                <div class="bg-black/50 absolute inset-0">
+                  <div
+                    class="flex h-full justify-center items-center font-bold"
+                  >
+                    <h1 class="text-2xl text-white">EVENEMENT 3</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-[#edecf4] text-purpleG py-5 px-8">
+                <h1 class="font-bold text-lg">Twee datums beschikbaar</h1>
+                <p class="">Locatie, Amsterdam</p>
+              </div>
+              <button
+                class="bg-purpleG w-full text-white text-lg font-bold py-3 rounded-b-2xl"
+              >
+                Vanaf €320
+              </button>
+            </div>
+            <div class="hidden md:block">
+              <div class="relative">
+                <img
+                  src="../assets/images/Placeholder.png"
+                  alt="event dancing"
+                  class="w-full"
+                />
+                <div class="bg-black/50 absolute inset-0">
+                  <div
+                    class="flex h-full justify-center items-center font-bold"
+                  >
+                    <h1 class="text-2xl text-white">EVENEMENT 4</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-[#edecf4] text-purpleG py-5 px-8">
+                <h1 class="font-bold text-lg">Twee datums beschikbaar</h1>
+                <p class="">Locatie, Amsterdam</p>
+              </div>
+              <button
+                class="bg-purpleG w-full text-white text-lg font-bold py-3 rounded-b-2xl"
+              >
+                Vanaf €320
+              </button>
+            </div>
+
+            <div class="hidden md:block">
+              <div class="relative">
+                <img
+                  src="../assets/images/Placeholder.png"
+                  alt="event dancing"
+                  class="w-full"
+                />
+                <div class="bg-black/50 absolute inset-0">
+                  <div
+                    class="flex h-full justify-center items-center font-bold"
+                  >
+                    <h1 class="text-2xl text-white">EVENEMENT 5</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-[#edecf4] text-purpleG py-5 px-8">
+                <h1 class="font-bold text-lg">Twee datums beschikbaar</h1>
+                <p class="">Locatie, Amsterdam</p>
+              </div>
+              <button
+                class="bg-purpleG w-full text-white text-lg font-bold py-3 rounded-b-2xl"
+              >
+                Vanaf €320
+              </button>
+            </div>
+
+            <div class="hidden md:block">
+              <div class="relative">
+                <img
+                  src="../assets/images/Placeholder.png"
+                  alt="event dancing"
+                  class="w-full"
+                />
+                <div class="bg-black/50 absolute inset-0">
+                  <div
+                    class="flex h-full justify-center items-center font-bold"
+                  >
+                    <h1 class="text-2xl text-white">EVENEMENT 6</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-[#edecf4] text-purpleG py-5 px-8">
+                <h1 class="font-bold text-lg">Twee datums beschikbaar</h1>
+                <p class="">Locatie, Amsterdam</p>
+              </div>
+              <button
+                class="bg-purpleG w-full text-white text-lg font-bold py-3 rounded-b-2xl"
+              >
+                Vanaf €320
+              </button>
+            </div>
+          </div>
+          <a href="#search">
+          <button 
+            class="hidden md:flex items-center gap-3 py-2 px-3 text-purpleG font-bold text-lg rounded-xl border border-purpleG mx-auto mt-16 hover:bg-purpleG/20"
+          >
+            <img src="../assets/icons/Magnify.svg" alt="magnify" width="30px" />
+            Zoek evenement
+        </button>
+      </a>
+        </div>
+      </section>
+
+      <!-------------- USP’s Section ---------------->
+      <section id="usps" class="hidden md:block">
+        <div class="bg-gradient-to-r from-redG to-purpleG py-12 lg:py-20">
+          <div class="px-5 md:px-10 xl:container xl:mx-auto">
+            <div class="grid grid-cols-3 gap-5 lg:gap-10 text-white">
+              <div class="text-center">
+                <img
+                  src="../assets/icons/Star.svg"
+                  alt="star"
+                  width="50px"
+                  class="mx-auto"
+                />
+                <h1 class="font-bold text-lg mt-6">Klanten geven</h1>
+                <h1 class="font-bold text-lg -mt-1">ons een 4,3!</h1>
+                <p class="font-light mt-5">
+                  Met altijd de beste tickets maken wij al jaren vele mensen
+                  blij.
+                </p>
+              </div>
+
+              <div class="text-center">
+                <img
+                  src="../assets/icons/Shield.svg"
+                  alt="star"
+                  width="50px"
+                  class="mx-auto"
+                />
+                <h1 class="font-bold text-lg leading-6 mt-6">
+                  Je aankoop is altijd verzekerd tegen geannuleerde evenementen
+                </h1>
+                <p class="font-light mt-5">
+                  Indien een evenement niet doorgaat en er geen nieuwe datum
+                  komt krijg je altijd het volledige bedrag terug!
+                </p>
+              </div>
+
+              <div class="text-center">
+                <img
+                  src="../assets/icons/Credit.svg"
+                  alt="star"
+                  width="50px"
+                  class="mx-auto"
+                />
+                <h1 class="font-bold text-lg mt-6">De betaling is</h1>
+                <h1 class="font-bold text-lg -mt-1">100% veilig</h1>
+                <p class="font-light mt-5">
+                  Je betalingsgegevens worden altijd met een SSL verbinding
+                  verzonden. Zo ben je zeker van een veilige betaling.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-------------- AANKOMENDE EVENEMENTEN Section ---------------->
+      <section id="aankomende-evenementen">
+        <div class="bg-aankomendeEvenementen bg-center bg-no-repeat bg-cover">
+          <div class="bg-[#0f1e42]/70 pt-16 md:pt-20 pb-10 md:pb-48">
+            <div class="pr-4 md:px-10 xl:container xl:mx-auto">
+              <div class="lg:grid lg:grid-cols-6">
+                <div
+                  class="lg:col-span-4 lg:col-start-2 md:px-10 lg:px-0 text-white"
+                >
+                  <h1 class="text-2xl font-bold ml-5 md:ml-32">
+                    AANKOMENDE
+                    <span class="font-light"> EVENEMENTEN</span>
+                  </h1>
+
+                  <div
+                    class="flex items-center justify-between md:px-3 py-2 mt-5 md:mt-10 rounded-md group hover:bg-white/20"
+                  >
+                    <div class="flex items-center sm:gap-5">
+                      <div class="relative">
+                        <div class="w-[90px]">
+                          <img
+                            src="../assets/icons/Calendar.svg"
+                            alt="Calendar"
+                          />
+                        </div>
+                        <h1
+                          class="absolute top-11 left-8 text-black text-lg font-bold"
+                        >
+                          25
+                        </h1>
+                      </div>
+                      <div class="mt-2">
+                        <h1 class="text-lg sm:text-xl font-semibold">
+                          Justin Bieber
+                        </h1>
+                        <p class="sm:text-lg font-light">00-00-0000</p>
+                      </div>
+                    </div>
+                    <button
+                      class="uppercase font-medium px-5 sm:px-7 py-3 border border-white rounded-md group-hover:text-purpleG group-hover:bg-white"
+                    >
+                      Tickets
+                    </button>
+                  </div>
+
+                  <div
+                    class="flex items-center justify-between md:px-3 py-2 rounded-md group hover:bg-white/20"
+                  >
+                    <div class="flex items-center sm:gap-5">
+                      <div class="relative">
+                        <div class="w-[90px]">
+                          <img
+                            src="../assets/icons/Calendar.svg"
+                            alt="Calendar"
+                          />
+                        </div>
+                        <h1
+                          class="absolute top-11 left-8 text-black text-lg font-bold"
+                        >
+                          05
+                        </h1>
+                      </div>
+                      <div class="mt-2">
+                        <h1 class="text-lg sm:text-xl font-semibold">
+                          Bruce Springsteen
+                        </h1>
+                        <p class="sm:text-lg font-light">00-00-0000</p>
+                      </div>
+                    </div>
+                    <button
+                      class="uppercase font-medium px-5 sm:px-7 py-3 border border-white rounded-md group-hover:text-purpleG group-hover:bg-white"
+                    >
+                      Tickets
+                    </button>
+                  </div>
+
+                  <div
+                    class="flex items-center justify-between md:px-3 py-2 rounded-md group hover:bg-white/20"
+                  >
+                    <div class="flex items-center sm:gap-5">
+                      <div class="relative">
+                        <div class="w-[90px]">
+                          <img
+                            src="../assets/icons/Calendar.svg"
+                            alt="Calendar"
+                          />
+                        </div>
+                        <h1
+                          class="absolute top-11 left-8 text-black text-lg font-bold"
+                        >
+                          16
+                        </h1>
+                      </div>
+                      <div class="mt-2">
+                        <h1 class="text-lg sm:text-xl font-semibold">
+                          Defqon Weekend
+                        </h1>
+                        <p class="sm:text-lg font-light">00-00-0000</p>
+                      </div>
+                    </div>
+                    <button
+                      class="uppercase font-medium px-5 sm:px-7 py-3 border border-white rounded-md group-hover:text-purpleG group-hover:bg-white"
+                    >
+                      Tickets
+                    </button>
+                  </div>
+
+                  <div
+                    class="hidden md:flex items-center justify-between md:px-3 py-2 rounded-md group hover:bg-white/20"
+                  >
+                    <div class="flex items-center sm:gap-5">
+                      <div class="relative">
+                        <div class="w-[90px]">
+                          <img
+                            src="../assets/icons/Calendar.svg"
+                            alt="Calendar"
+                          />
+                        </div>
+                        <h1
+                          class="absolute top-11 left-8 text-black text-lg font-bold"
+                        >
+                          01
+                        </h1>
+                      </div>
+                      <div class="mt-2">
+                        <h1 class="text-lg sm:text-xl font-semibold">
+                          Ajax - Feyenoord
+                        </h1>
+                        <p class="sm:text-lg font-light">00-00-0000</p>
+                      </div>
+                    </div>
+                    <button
+                      class="uppercase font-medium px-5 sm:px-7 py-3 border border-white rounded-md group-hover:text-purpleG group-hover:bg-white"
+                    >
+                      Tickets
+                    </button>
+                  </div>
+
+                  <div
+                    class="hidden md:flex items-center justify-between md:px-3 py-2 rounded-md group hover:bg-white/20"
+                  >
+                    <div class="flex items-center sm:gap-5">
+                      <div class="relative">
+                        <div class="w-[90px]">
+                          <img
+                            src="../assets/icons/Calendar.svg"
+                            alt="Calendar"
+                          />
+                        </div>
+                        <h1
+                          class="absolute top-11 left-8 text-black text-lg font-bold"
+                        >
+                          05
+                        </h1>
+                      </div>
+                      <div class="mt-2">
+                        <h1 class="text-lg sm:text-xl font-semibold">
+                          Vrienden van Amstel
+                        </h1>
+                        <p class="sm:text-lg font-light">00-00-0000</p>
+                      </div>
+                    </div>
+                    <button
+                      class="uppercase font-medium px-5 sm:px-7 py-3 border border-white rounded-md group-hover:text-purpleG group-hover:bg-white"
+                    >
+                      Tickets
+                    </button>
+                  </div>
+
+                  <div
+                    class="hidden md:flex items-center justify-between md:px-3 py-2 rounded-md group hover:bg-white/20"
+                  >
+                    <div class="flex items-center sm:gap-5">
+                      <div class="relative">
+                        <div class="w-[90px]">
+                          <img
+                            src="../assets/icons/Calendar.svg"
+                            alt="Calendar"
+                          />
+                        </div>
+                        <h1
+                          class="absolute top-11 left-8 text-black text-lg font-bold"
+                        >
+                          20
+                        </h1>
+                      </div>
+                      <div class="mt-2">
+                        <h1 class="text-lg sm:text-xl font-semibold">
+                          Taylor Swift
+                        </h1>
+                        <p class="sm:text-lg font-light">00-00-0000</p>
+                      </div>
+                    </div>
+                    <button
+                      class="uppercase font-medium px-5 sm:px-7 py-3 border border-white rounded-md group-hover:text-purpleG group-hover:bg-white"
+                    >
+                      Tickets
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-------------- Reviews Section ---------------->
+      <section id="reviews" class="relative mt-14 md:mt-0">
+        <div class="bg-emojis bg-top bg-no-repeat bg-contain">
+          <div
+            class="md:absolute md:-top-12 md:translate-x-[-50%] md:left-[50%] md:right-[-50%]"
+          >
+            <div class="px-5 md:px-10 xl:container xl:mx-auto">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-10">
+                <div>
+                  <div class="bg-white shadow-lg text-purpleG text-center p-8">
+                    <h1 class="font-bold text-xl mt-5">RUBEN V</h1>
+                    <h1 class="font-light text-xl">GOOGLE REVIEW</h1>
+                    <p class="mt-5 text-sm">
+                      “Ik kreeg snelle reactie nadat mijn tickets niet werden
+                      geleverd dus is wel betrouwbare site”
+                    </p>
+                  </div>
+                  <div
+                    class="bg-purpleG w-full py-3 rounded-b-2xl inline-flex justify-center"
+                  >
+                    <img
+                      src="../assets/icons/StarFill.svg"
+                      alt="stars"
+                      width="20"
+                    />
+                    <img
+                      src="../assets/icons/StarFill.svg"
+                      alt="stars"
+                      width="20"
+                    />
+                    <img
+                      src="../assets/icons/StarFill.svg"
+                      alt="stars"
+                      width="20"
+                    />
+                    <img
+                      src="../assets/icons/Star.svg"
+                      alt="stars"
+                      width="20"
+                    />
+                    <img
+                      src="../assets/icons/Star.svg"
+                      alt="stars"
+                      width="20"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <div class="bg-white text-purpleG shadow-lg text-center p-8">
+                    <h1 class="font-bold text-xl mt-5">RUBEN V</h1>
+                    <h1 class="font-light text-xl">GOOGLE REVIEW</h1>
+                    <p class="mt-5 text-sm">
+                      “Ik kreeg snelle reactie nadat mijn tickets niet werden
+                      geleverd dus is wel betrouwbare site”
+                    </p>
+                  </div>
+                  <div
+                    class="bg-purpleG w-full py-3 rounded-b-2xl inline-flex justify-center"
+                  >
+                    <img
+                      src="../assets/icons/StarFill.svg"
+                      alt="stars"
+                      width="20"
+                    />
+                    <img
+                      src="../assets/icons/StarFill.svg"
+                      alt="stars"
+                      width="20"
+                    />
+                    <img
+                      src="../assets/icons/StarFill.svg"
+                      alt="stars"
+                      width="20"
+                    />
+                    <img
+                      src="../assets/icons/Star.svg"
+                      alt="stars"
+                      width="20"
+                    />
+                    <img
+                      src="../assets/icons/Star.svg"
+                      alt="stars"
+                      width="20"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <div class="bg-white text-purpleG shadow-lg text-center p-8">
+                    <h1 class="font-bold text-xl mt-5">RUBEN V</h1>
+                    <h1 class="font-light text-xl">GOOGLE REVIEW</h1>
+                    <p class="mt-5 text-sm">
+                      “Ik kreeg snelle reactie nadat mijn tickets niet werden
+                      geleverd dus is wel betrouwbare site”
+                    </p>
+                  </div>
+                  <div
+                    class="bg-purpleG w-full py-3 rounded-b-2xl inline-flex justify-center"
+                  >
+                    <img
+                      src="../assets/icons/StarFill.svg"
+                      alt="stars"
+                      width="20"
+                    />
+                    <img
+                      src="../assets/icons/StarFill.svg"
+                      alt="stars"
+                      width="20"
+                    />
+                    <img
+                      src="../assets/icons/StarFill.svg"
+                      alt="stars"
+                      width="20"
+                    />
+                    <img
+                      src="../assets/icons/Star.svg"
+                      alt="stars"
+                      width="20"
+                    />
+                    <img
+                      src="../assets/icons/Star.svg"
+                      alt="stars"
+                      width="20"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="px-5 md:px-10 xl:container xl:mx-auto">
+            <div
+              class="grid grid-cols-1 md:grid-cols-5 gap-5 pt-16 md:pt-[25rem]"
+            >
+              <div class="md:col-span-3 text-purpleG">
+                <h1 class="text-xl sm:text-2xl font-bold">
+                  SPECIAAL GESLECTEERD
+                  <span class="font-light"> VOOR JOU </span>
+                </h1>
+                <div class="grid grid-cols-2 gap-7 mt-8 sm:mt-12">
+                  <div>
+                    <h1 class="font-semibold text-lg sm:text-xl">
+                      Justin Bieber
+                    </h1>
+                    <p>00-00-0000</p>
+                  </div>
+                  <div>
+                    <h1 class="font-semibold text-lg sm:text-xl">
+                      Taylor Swift
+                    </h1>
+                    <p>00-00-0000</p>
+                  </div>
+                  <div>
+                    <h1 class="font-semibold text-lg sm:text-xl">
+                      Bruce Springsteen
+                    </h1>
+                    <p>00-00-0000</p>
+                  </div>
+                  <div>
+                    <h1 class="font-semibold text-lg sm:text-xl">
+                      Acda en de Munnik
+                    </h1>
+                    <p>00-00-0000</p>
+                  </div>
+                  <div>
+                    <h1 class="font-semibold text-lg sm:text-xl">
+                      Defqon Weekend
+                    </h1>
+                    <p>00-00-0000</p>
+                  </div>
+                  <div>
+                    <h1 class="font-semibold text-lg sm:text-xl">
+                      Vrienden van Amstel
+                    </h1>
+                    <p>00-00-0000</p>
+                  </div>
+                </div>
+              </div>
+              <div class="md:col-span-2 md:self-end">
+                <img
+                  src="../assets/icons/Cartoons-1.svg"
+                  alt="cartoon"
+                  class="md:ml-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-------------- DE LAATSTE TICKETS Section ---------------->
+      <section id="de-laatste-tickets">
+        <div class="bg-tickets bg-top bg-no-repeat bg-cover mt-16">
+          <div class="bg-black/60 pt-20 md:pt-36 pb-20 md:pb-44">
+            <div class="px-5 md:px-10 xl:container xl:mx-auto">
+              <h1 class="text-3xl md:text-5xl font-bold text-center text-white">
+                DE LAATSTE
+                <span class="font-light"> TICKETS </span>
+              </h1>
+              <button
+                class="flex items-center gap-1 text-white font-bold bg-redG rounded-lg mx-auto mt-8 py-2 px-5"
+              >
+                Bekijk alle laatste events
+                <img
+                  src="../assets/icons/chevRight.svg"
+                  alt="arrow"
+                  class="h-4 w-4"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-------------- OVER DE ORGANISATIE Section ---------------->
+      <section id="over-de" class="relative">
+        <div
+          class="hidden md:block absolute -top-20 translate-x-[-50%] left-[50%] right-[-50%]"
+        >
+          <div class="px-5 md:px-10 xl:container xl:mx-auto">
+            <div class="grid grid-cols-3 gap-5 lg:gap-10">
+              <div class="border-4 border-white">
+                <div class="relative">
+                  <img
+                    src="../assets/images/stadium.jpg"
+                    alt="stadium"
+                    class="w-full"
+                  />
+                  <div class="bg-black/60 absolute inset-0">
+                    <div
+                      class="flex h-full justify-center items-center font-semibold pt-3"
+                    >
+                      <h1 class="text-xl lg:text-3xl text-white">
+                        DEFQON
+                        <span class="font-light"> 2024 </span>
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-redG w-full py-3 rounded-b-2xl flex justify-center"
+                >
+                  <p class="font-bold text-white">De laatste 15 tickets</p>
+                </div>
+              </div>
+
+              <div class="border-4 border-white">
+                <div class="relative">
+                  <img
+                    src="../assets/images/stadium.jpg"
+                    alt="stadium"
+                    class="w-full"
+                  />
+                  <div class="bg-black/60 absolute inset-0">
+                    <div
+                      class="flex h-full justify-center items-center font-semibold pt-3"
+                    >
+                      <h1 class="text-xl lg:text-3xl text-white">
+                        DEFQON
+                        <span class="font-light"> 2024 </span>
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-redG w-full py-3 rounded-b-2xl flex justify-center"
+                >
+                  <p class="font-bold text-white">De laatste 15 tickets</p>
+                </div>
+              </div>
+
+              <div class="border-4 border-white">
+                <div class="relative">
+                  <img
+                    src="../assets/images/stadium.jpg"
+                    alt="stadium"
+                    class="w-full"
+                  />
+                  <div class="bg-black/60 absolute inset-0">
+                    <div
+                      class="flex h-full justify-center items-center font-semibold pt-3"
+                    >
+                      <h1 class="text-xl lg:text-3xl text-white">
+                        DEFQON
+                        <span class="font-light"> 2024 </span>
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-redG w-full py-3 rounded-b-2xl flex justify-center"
+                >
+                  <p class="font-bold text-white">De laatste 15 tickets</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-5 md:px-10 xl:container xl:mx-auto pt-16 md:pt-48">
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-10">
+            <div class="md:col-span-2 order-last md:order-first">
+              <img
+                src="../assets/icons/Cartoons-2.svg"
+                alt="Cartoon"
+                class="mr-auto"
+              />
+            </div>
+            <div class="md:col-span-3 text-purpleG self-center">
+              <h1 class="text-xl md:text-3xl font-bold">
+                OVER DE ORGANISATIE
+                <span class="font-light"> GOTICKETSHOP </span>
+              </h1>
+              <p class="md:text-lg mt-5">
+                Verhaaltje over GoTicketShop, Abori sedicate aditiundusae
+                voloria et et moloreh enissimet as debis aut ut omnias et
+                verestia inullenis simagni hillor aliqui rerro maximin conserc
+                hitaquostior ant.Necestr uptataestiam eum, et abo. Molorer
+                eperem lam quam suntur a as quatet veliquodit lique nullupi
+                entiae. Ut quunte volore, omni simus.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 sm:gap-10 lg:gap-5 my-12 sm:my-20"
+          >
+            <div class="flex justify-center sm:justify-start">
+              <div class="text-purpleG">
+                <div
+                  class="relative h-12 w-2 hover:w-48 bg-redG transition-all ease-linear duration-300 group"
+                >
+                  <h1
+                    class="absolute left-10 top-2 text-2xl font-bold group-hover:text-white"
+                  >
+                    Concerten
+                  </h1>
+                </div>
+                <div class="pl-10 mt-7">
+                  <div class="hidden md:block">
+                    <h1 class="text-xl">Justin Bieber</h1>
+                    <h1 class="text-xl">Bruce Springsteen</h1>
+                    <h1 class="text-xl">Coldplay</h1>
+                    <h1 class="text-xl">Marinniepinnie</h1>
+                  </div>
+
+                  <button
+                    class="bg-redG flex items-center gap-1 rounded-lg text-white font-bold py-2 px-5 mt-8"
+                  >
+                    Alle concerten
+                    <img
+                      src="../assets/icons/ArrowR.svg"
+                      alt="arrow"
+                      class="w-4 h-4"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-center sm:justify-start">
+              <div class="text-purpleG">
+                <div
+                  class="relative h-12 w-2 hover:w-48 bg-skyBlue transition-all ease-linear duration-300 group"
+                >
+                  <h1
+                    class="absolute left-10 top-2 text-2xl font-bold group-hover:text-white"
+                  >
+                    Festivals
+                  </h1>
+                </div>
+                <div class="pl-10 mt-7">
+                  <div class="hidden md:block">
+                    <h1 class="text-xl">Tomorrowland</h1>
+                    <h1 class="text-xl">Defqon Weekend</h1>
+                    <h1 class="text-xl">Appelsap</h1>
+                    <h1 class="text-xl">Into the Woods ADE</h1>
+                  </div>
+
+                  <button
+                    class="bg-skyBlue flex items-center gap-1 rounded-lg text-white font-bold py-2 px-5 mt-8"
+                  >
+                    Alle festivals
+                    <img
+                      src="../assets/icons/ArrowR.svg"
+                      alt="arrow"
+                      class="w-4 h-4"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-center sm:justify-start">
+              <div class="text-purpleG">
+                <div
+                  class="relative h-12 w-2 hover:w-48 bg-purpleG transition-all ease-linear duration-300 group"
+                >
+                  <h1
+                    class="absolute left-10 top-2 text-2xl font-bold group-hover:text-white"
+                  >
+                    Theaters
+                  </h1>
+                </div>
+                <div class="pl-10 mt-7">
+                  <div class="hidden md:block">
+                    <h1 class="text-xl">Ronald Goedemondt</h1>
+                    <h1 class="text-xl">Rundfunk</h1>
+                    <h1 class="text-xl">Freek de Jonge</h1>
+                    <h1 class="text-xl">Dave Chapelle</h1>
+                  </div>
+
+                  <button
+                    class="bg-purpleG flex items-center gap-1 rounded-lg text-white font-bold py-2 px-5 mt-8"
+                  >
+                    Alle theaters
+                    <img
+                      src="../assets/icons/ArrowR.svg"
+                      alt="arrow"
+                      class="w-4 h-4"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-center sm:justify-start">
+              <div class="text-purpleG">
+                <div
+                  class="relative h-12 w-2 hover:w-40 bg-greenG transition-all ease-linear duration-300 group"
+                >
+                  <h1
+                    class="absolute left-10 top-2 text-2xl font-bold group-hover:text-white"
+                  >
+                    Sport
+                  </h1>
+                </div>
+                <div class="pl-10 mt-7">
+                  <div class="hidden md:block">
+                    <h1 class="text-xl">Feyenoord</h1>
+                    <h1 class="text-xl">PEC</h1>
+                    <h1 class="text-xl">Glory</h1>
+                    <h1 class="text-xl">Dutch GP 2023</h1>
+                  </div>
+
+                  <button
+                    class="bg-greenG flex items-center gap-1 rounded-lg text-white font-bold py-2 px-5 mt-8"
+                  >
+                    Alle sport
+                    <img
+                      src="../assets/icons/ArrowR.svg"
+                      alt="arrow"
+                      class="w-4 h-4"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-------------- POPULAIRE LOCATIES Section ---------------->
+      <section id="popular-locaties" class="hidden md:block pt-10 lg:pt-16">
+        <div class="px-5 md:px-10 xl:container xl:mx-auto">
+          <h1 class="font-bold text-3xl text-purpleG pl-5">
+            POPULAIRE
+            <span class="font-light"> LOCATIES </span>
+          </h1>
+
+          <div class="locaties mt-7">
+            <div class="p-2 xl:p-4">
+              <div class="border-4 border-white">
+                <div class="relative">
+                  <img
+                    src="../assets/images/stadium.jpg"
+                    alt="stadium"
+                    class="h-[150px] w-full"
+                  />
+                  <div class="bg-black/60 absolute inset-0">
+                    <div
+                      class="flex h-full justify-center items-center font-semibold pt-3"
+                    >
+                      <h1 class="text-2xl text-white text-center">
+                        AFAS STADION
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-purpleG w-full py-3 rounded-b-2xl flex justify-center"
+                >
+                  <p class="font-bold text-white">5 evenementen</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-2 xl:p-4">
+              <div class="border-4 border-white">
+                <div class="relative">
+                  <img
+                    src="../assets/images/stadium.jpg"
+                    alt="stadium"
+                    class="h-[150px] w-full"
+                  />
+                  <div class="bg-black/60 absolute inset-0">
+                    <div
+                      class="flex h-full justify-center items-center font-semibold pt-3"
+                    >
+                      <h1 class="text-2xl text-white text-center">
+                        ZIGGO DOME
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-purpleG w-full py-3 rounded-b-2xl flex justify-center"
+                >
+                  <p class="font-bold text-white">5 evenementen</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-2 xl:p-4">
+              <div class="border-4 border-white">
+                <div class="relative">
+                  <img
+                    src="../assets/images/stadium.jpg"
+                    alt="stadium"
+                    class="h-[150px] w-full"
+                  />
+                  <div class="bg-black/60 absolute inset-0">
+                    <div
+                      class="flex h-full justify-center items-center font-semibold pt-3"
+                    >
+                      <h1 class="text-2xl text-white text-center">
+                        EVENEMENTENTERREIN WALIBI
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-purpleG w-full py-3 rounded-b-2xl flex justify-center"
+                >
+                  <p class="font-bold text-white">5 evenementen</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-2 xl:p-4">
+              <div class="border-4 border-white">
+                <div class="relative">
+                  <img
+                    src="../assets/images/stadium.jpg"
+                    alt="stadium"
+                    class="h-[150px] w-full"
+                  />
+                  <div class="bg-black/60 absolute inset-0">
+                    <div
+                      class="flex h-full justify-center items-center font-semibold pt-3"
+                    >
+                      <h1 class="text-2xl text-white text-center">
+                        DEFQON 2024
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-purpleG w-full py-3 rounded-b-2xl flex justify-center"
+                >
+                  <p class="font-bold text-white">5 evenementen</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-------------- News letter Section ---------------->
+      <section id="newsletter">
+        <div class="bg-gradient-to-r from-redG to-purpleG py-12 md:py-20 mt-24">
+          <div class="px-5 md:px-10 xl:container xl:mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-white">
+              <div class="self-center">
+                <div class="flex items-center justify-center gap-5">
+                  <img
+                    src="../assets/icons/Facebook(1).svg"
+                    alt="Facebook"
+                    width="60px"
+                  />
+                  <img
+                    src="../assets/icons/Instagram(1).svg"
+                    alt="Insta"
+                    width="60px"
+                  />
+                </div>
+              </div>
+              <div class="text-center">
+                <h1 class="text-xl font-bold">
+                  Meld je aan voor onze nieuwsbrief
+                </h1>
+                <p class="max-w-[400px] font-light mt-5 mx-auto">
+                  Ontvang persoonlijke aanbiedingen en het laatste evenementen
+                  nieuws
+                </p>
+
+                <form action="" onsubmit="Newsletter(); return false" class="flex justify-center">
+                  <div class="w-[400px]">
+                    <input
+                      type="text"
+                      placeholder="Jouw e-mailadres" id="email"
+                      class="text-black w-full py-3 px-5 mt-10 block focus:outline-purpleG mx-auto"
+                    />
+                    <button 
+                      type="submit"
+                      class="bg-greenG py-3 rounded-b-2xl font-bold text-white w-full mx-auto"
+                    >
+                      Aanmelden
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="py-12 lg:my-20">
+      <div class="px-5 md:px-10 xl:container xl:mx-auto">
+        <div
+          class="grid grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-10 text-purpleG"
+        >
+          <div>
+            <h1 class="font-bold sm:text-xl mb-5">Populaire evenementen</h1>
+            <div class="flex flex-col gap-1">
+              <a href="#" class="text-sm sm:text-base font-light"
+                >André Rieu Tickets</a
+              >
+              <a href="#" class="text-sm sm:text-base font-light"
+                >Bruce Springsteen and The E Street</a
+              >
+              <a href="#" class="text-sm sm:text-base font-light"
+                >Band Tickets</a
+              >
+              <a href="#" class="text-sm sm:text-base font-light"
+                >Zara Larsson Tickets</a
+              >
+              <a href="#" class="text-sm sm:text-base font-light"
+                >Acda en De Munnik Tickets</a
+              >
+              <a href="#" class="text-sm sm:text-base font-light"
+                >Anouk Tickets</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h1 class="font-bold sm:text-xl mb-5">Speciaal voor jou</h1>
+            <div class="flex flex-col gap-1">
+              <a href="#" class="text-sm sm:text-base font-light"
+                >OMD Tickets</a
+              >
+              <a href="#" class="text-sm sm:text-base font-light"
+                >ABN AMRO Open Tickets</a
+              >
+              <a href="#" class="text-sm sm:text-base font-light"
+                >Guus Meeuwis Tickets</a
+              >
+              <a href="#" class="text-sm sm:text-base font-light"
+                >REBiRTH Festival Tickets</a
+              >
+              <a href="#" class="text-sm sm:text-base font-light"
+                >Taylor Swift Tickets</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h1 class="font-bold sm:text-xl mb-5">Over GoTicketShop</h1>
+            <div class="flex flex-col gap-1">
+              <a href="#" class="text-sm sm:text-base font-light"
+                >Mijn account</a
+              >
+              <a href="#" class="text-sm sm:text-base font-light"
+                >Tickets verkopen</a
+              >
+              <a href="#" class="text-sm sm:text-base font-light"
+                >Klantenservice</a
+              >
+              <a href="#" class="text-sm sm:text-base font-light"
+                >Algemene voorwaarden</a
+              >
+              <a href="#" class="text-sm sm:text-base font-light"
+                >Privacybeleid</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h1 class="font-bold sm:text-xl mb-5">Contactgegevens</h1>
+            <div class="flex flex-col gap-1">
+              <div class="flex items-center gap-3">
+                <img
+                  src="../assets/icons/Veelgestelde vragen.svg"
+                  alt="icon"
+                  width="20px"
+                />
+                <a href="#" class="text-sm sm:text-base font-light"
+                  >Veelgestelde vragen</a
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <img src="../assets/icons/mail.svg" alt="icon" width="20px" />
+                <a href="#" class="text-sm sm:text-base font-light"
+                  >info@goticketshop.nl</a
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <img
+                  src="../assets/icons/Instagram(2).svg"
+                  alt="icon"
+                  width="20px"
+                />
+                <a href="#" class="text-sm sm:text-base font-light"
+                  >@goticketshop</a
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <img
+                  src="../assets/icons/Facebook(2).svg"
+                  alt="icon"
+                  width="20px"
+                />
+                <a href="#" class="text-sm sm:text-base font-light"
+                  >GoTicketShop</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!----------- JQuery ----------->
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <!----------- Slick slider ----------->
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

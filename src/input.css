@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  position: relative;
+  font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
+}
+a:-webkit-any-link {
+  text-decoration: none;
+  color: inherit;
+}
